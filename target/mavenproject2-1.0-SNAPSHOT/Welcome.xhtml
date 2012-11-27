@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html" xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <style type="text/css">
+             .div_middle1 {
+                 margin: 12px;
+                 position: relative;
+                 top: 10px;
+                 width: 250px;
+                 height: 600px;
+                 border: 1px solid green;
+                 display: inline-block;
+                 float:left;
+             }
+             .div_middle2 
+             {
+                
+                 position: relative;
+                 top: 10px;
+                 width: 250px;
+                 height: 600px;
+                 border: 1px solid green;
+                 display: inline-block;
+                 border-color: red;
+                 float:left;
+             }
+             
+         </style>
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    
+    <frameset rows="16%,84%" border="1">
+        <frame src="pages/Header.xhtml" name="top"/>
+            
+            <frameset cols="20%,*">
+                
+                 <frame src="pages/Middle1.xhtml" name="bottom1"/>
+                 <frameset rows="*,10%"> 
+                  <frame src="pages/Middle2.xhtml" name="bottom2"/>  
+                  <frame src="pages/LogoutFrame.xhtml" name="bottom2"/>  
+                 </frameset>
+                  
+                  
+            </frameset>
+    </frameset> 
+    
+    
+    
+</html>
+

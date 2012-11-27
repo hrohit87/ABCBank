@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    
+    <SCRIPT LANGUAGE="JavaScript" SRC="static/jquery-1.7.2.min.js">
+        
+</SCRIPT>
+    <script language="javascript">
+        
+        $("").ready(function()
+        {
+           // alert("ready");
+            
+        });
+        
+        
+        function cl()
+        {
+           
+           
+           
+           
+           alert("fuct "+$("#j_idt7\\:username").val());
+           
+           $("#j_idt7\\:username").val("")
+           $("#j_idt7\\:pass").val("");
+            
+            
+        }
+        
+        
+        
+    </script>
+            
+    
+    
+    
+    <style>
+        
+        .logindiv1
+        {
+            border:1px solid black;
+            position:absolute;
+            top: 20px;
+            height:200px;
+            width:250px;
+            left:20px;
+            
+            
+        }
+        
+         .logindiv2
+        {
+            border:1px solid black;
+            position:absolute;
+            top: 200px;
+            height:200px;
+            width:250px;
+            right:20px;
+            
+            
+        }
+        
+        .div_username
+        {
+            position:relative;
+            top: 20px;
+            
+            
+        }
+        
+        .div_pass
+        {
+           position:relative;
+            top: 20px;
+            
+            
+        }
+        
+        .login
+        {
+            
+            color:red;
+         }
+        
+        .login_button
+        {
+           position:relative;
+           left:70px;
+            
+        }
+        .clear_button
+        {
+           position:relative;
+           left:70px;
+            
+        }
+        
+        .bd
+        {
+             background-image: url('static/images/innovation-in-retail-banking.jpg' );
+             background-position: 100,100,100,100;
+             background-repeat: no-repeat;
+             height:100px;
+             width:100px;
+             
+            
+        }
+    </style>
+    
+    
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    
+    
+    <h:body class="bd">
+        <h:form>
+          <div class="logindiv1">
+           
+            
+            
+          </div>  
+
+         
+            
+       <div class="logindiv2">
+           
+           <div class="login"></div><h3 align="center">Login</h3>
+           
+           <div class="div_username"> Username:-<h:inputText id="username" value="#{user.username}" valuChangeListener="#{user.valueChange}" immediate="true"/></div>
+           <div class="div_pass">  Password:-<h:inputSecret id="pass" value="#{user.pass}"/></div>
+           <div class="div_pass">  <h:outputText id="invalid" style="color:red;" value="#{user.message}"/></div>
+            <br/><br/>
+            <h:commandButton value="Login" action="#{user.check}" class="login_button"/>
+             
+           
+            <input type="button" value="Clear" onclick="cl()" class="clear_button"/>
+            
+            
+            
+       </div>  
+
+                
+                
+            
+            
+            
+        </h:form>
+    </h:body>
+</html>
+
