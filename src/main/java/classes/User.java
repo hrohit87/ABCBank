@@ -59,8 +59,7 @@ public class User implements Serializable,ValueChangeListener,ActionListener
     
     public String check()
     {
-        
-        
+                
         
          System.out.println("inside check "+username);
          HttpSession ss= (HttpSession) FacesContext.getCurrentInstance().getExternalContext().getSession(true); 
